@@ -1,5 +1,7 @@
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -9,6 +11,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.*
 import compose.SideBar
+import screens.Dashboard
+import screens.Inventory
 
 @Composable
 @Preview
@@ -25,9 +29,23 @@ fun App() {
                 }
             },
             content = {
-                SideBar(){
-                    print(it)
+                Row {
+                    SideBar(){
+                        selectedOption=it
+                    }
+
+                    when(selectedOption){
+                        "Dashboard" ->{
+                            Dashboard()
+                        }
+                        "Inventory" ->{
+                            Inventory()
+                        }
+                    }
                 }
+
+
+
             }
         )
     }
