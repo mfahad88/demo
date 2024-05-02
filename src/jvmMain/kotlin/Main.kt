@@ -11,6 +11,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.*
 import compose.SideBar
+import screens.Customer
 import screens.Dashboard
 import screens.Inventory
 
@@ -40,6 +41,9 @@ fun App() {
                         }
                         "Inventory" ->{
                             Inventory()
+                        }
+                        "Customer" -> {
+                            Customer()
                         }
                     }
                 }

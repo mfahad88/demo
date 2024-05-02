@@ -15,7 +15,7 @@ fun SideBar(onClick:(String)->Unit) {
 
     Column(modifier = Modifier
         .fillMaxHeight()
-        .fillMaxWidth(0.3f)
+        .fillMaxWidth(0.2f)
         .background(Color.DarkGray)
         .padding(top = 10.dp, start = 5.dp)){
 
@@ -31,6 +31,9 @@ fun SideBar(onClick:(String)->Unit) {
                     onClick(it)
                 }
                 MenuText("Supplier"){
+                    onClick(it)
+                }
+                MenuText("Customer"){
                     onClick(it)
                 }
                 MenuText("Return"){
