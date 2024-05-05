@@ -20,8 +20,8 @@ import androidx.compose.ui.unit.dp
 fun LabelTextField(label:String="Customer Name: ",value:String="",keyboardType: KeyboardType, onValueChange: (String) -> Unit){
     Row {
         Text(label, modifier = Modifier.align(Alignment.Bottom))
-        OutlinedTextField(value = value, onValueChange ={
+        OutlinedTextField(value = value, singleLine = true ,onValueChange ={
             onValueChange(it)
-        }, keyboardOptions = KeyboardOptions(keyboardType = keyboardType), modifier = Modifier.height(10.dp))
+        }, keyboardOptions = KeyboardOptions(keyboardType = keyboardType), modifier = Modifier.height(50.dp))
     }
 }
